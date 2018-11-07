@@ -7,14 +7,14 @@ const checkThree = i => (i % 3 === 0)
 const checkFive = i => (i % 5 === 0)
 
 const test = n => {
-  let tempList = [];
+  let tempList = []
   for (let i = 1; i <= n; i++) {
-    let item = '';
+    let item = ''
     if (checkThree(i)) item = "fizz"
     if (checkFive(i)) item = item + "buzz"
-    if (!checkThree(i) && !checkFive(i)) item = i;
-    tempList.push(item);
+    if (!checkThree(i) && !checkFive(i)) item = i
+    tempList.push(item)
   }
-  return tempList;
+  return tempList
 }
 console.log(test(15))
