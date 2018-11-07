@@ -1,3 +1,7 @@
-letter = 't'
+# letter = 't'
 
-print chr(ord('t') + ord('A') - ord('a'))
+def getUpperClass(letter):
+    charCodeOfLetter = ord(letter) + ord('A') - ord('a')
+    return chr(charCodeOfLetter)
+
+print getUpperClass('a')
