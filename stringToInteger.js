@@ -29,3 +29,16 @@ console.log(stringToInteger('123'))
 console.log(stringToInteger('-3123'))
 console.log(typeof stringToInteger('-3123'))
 console.log(stringToInteger('121aaa=222'))
+
+/*
+const arr = str.split('')
+arr.forEach((item, index) => {
+  if (index < start) return
+  if (!isIntString(item)) throw Error('not a integer string')
+  itemNum = strToNum(item)
+  number = number * 10 + itemNum
+});
+
+// foreach 无 break、continue，当 return 跳过本次循环进行下一次循环
+// 不如直接 for 循环
+*/
