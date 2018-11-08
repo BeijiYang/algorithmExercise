@@ -5,16 +5,17 @@
 // offset=2 => 'fgabcde'
 // offset=3 => 'efgabcd'
 
-// 当offset大于长度，是否考虑倍数？
-
 const rotateStr = (str, offset) => {
-  if (typeof offset !== 'number' || offset < 0 || offset > str.length) throw Error('invalid offset')
+  if (typeof offset !== 'number' || offset < 0) throw Error('invalid offset')
+  if (offset > str.length) offset = offset % str.length
   const headStr = str.slice(str.length - offset)
   const rareStr = str.slice(0, str.length - offset)
   return headStr.concat(rareStr)
 }
 
 console.log(rotateStr('abcdefg', 3))
+console.log(rotateStr('abc', 7))
+
 
 /*
 
