@@ -17,3 +17,17 @@ def rotate(str, offset):
 
 print rotate('abc', 1)
 print rotate('abcdef', 13)
+
+# @parama: str: an array of char # list
+# @parama: offset: an integer
+# @return: nothing
+def rotateTheStr(str, offset):
+    assert offset >= 0
+    if offset > len(str):
+        offset = offset % len(str)
+    start = len(str) - offset
+    end = 2 * len(str) - offset
+    result = (str * 2)[start:end]
+    # str = result # wrong on lintcode because of the reference thing
+    for index in xrange(len(str)):
+        str[index] = result[index]
