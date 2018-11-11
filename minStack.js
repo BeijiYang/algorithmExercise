@@ -54,13 +54,13 @@ var MinStack = function () {
 }
 
 MinStack.prototype.push = function (x) {
-  this.stack.push(x)
-  let min = this.min[this.min.length - 1]
-  if (min !== undefined) {
-    min > x ? this.min.push(x) : this.min.push(min)
+  let preMin = this.getMin()
+  if (preMin !== undefined) {
+    preMin > x ? this.min.push(x) : this.min.push(preMin)
   } else {
     this.min.push(x)
   }
+  this.stack.push(x)
 }
 
 MinStack.prototype.pop = function () {
