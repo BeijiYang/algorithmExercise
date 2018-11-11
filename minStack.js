@@ -15,6 +15,7 @@
 // minStack.top();      --> Returns 0.
 // minStack.getMin();   --> Returns -2.
 
+// SOLUTION ONE
 var MinStack = function () {
   this.stack = []
 }
@@ -29,7 +30,7 @@ MinStack.prototype.pop = function () {
 
 MinStack.prototype.top = function () {
   let len = this.stack.length
-  if (len !== 0) {
+  if (len > 0) {
     return this.stack[len - 1]
   }
 }
@@ -43,4 +44,40 @@ MinStack.prototype.getMin = function () {
     }
   }
   return tempMin
+}
+
+// A BETTER SOLUTION
+// O(n) => O(1)
+var MinStack = function () {
+  this.stack = []
+  this.min = []
+}
+
+MinStack.prototype.push = function (x) {
+  this.stack.push(x)
+  let min = this.min[this.min.length - 1]
+  if (min !== undefined) {
+    min > x ? this.min.push(x) : this.min.push(min)
+  } else {
+    this.min.push(x)
+  }
+}
+
+MinStack.prototype.pop = function () {
+  this.stack.pop()
+  this.min.pop()
+}
+
+MinStack.prototype.top = function () {
+  let len = this.stack.length
+  if (len > 0) {
+    return this.stack[len - 1]
+  }
+}
+
+MinStack.prototype.getMin = function () {
+  let len = this.min.length
+  if (len > 0) {
+    return this.min[len - 1]
+  }
 }
