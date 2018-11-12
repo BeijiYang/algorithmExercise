@@ -45,13 +45,7 @@ class Solution(object):
             else:
                 stack.append(cur)
 
-        if len(stack) == 0:
-            return True
-        else:
-            return False
+        return len(stack) == 0
         
     def match(self, pre, cur):
-        if (pre == "(" and cur == ")") or (pre == "[" and cur == "]") or (pre == "{" and cur == "}"):
-            return True
-        else:
-            return False
+        return (pre == "(" and cur == ")") or (pre == "[" and cur == "]") or (pre == "{" and cur == "}")
