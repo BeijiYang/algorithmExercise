@@ -6,15 +6,14 @@ const fibonacci = function (n) {
   let a = 0
   let b = 1
   let c
-
-  if (n == 1) return a
-  if (n == 2) return b
-  if (n > 2) {
-    for (var i = 3; i <= n; i++) {
-      c = a + b
-      a = b
-      b = c
-    }
-    return c
+  for (let i = 1; i < n; i++) {
+    c = a + b
+    a = b
+    b = c
   }
+  return a
 }
+// a, b=>c       //a,b 往前平移了零次
+//    a, b=>c    //a,b 往前平移了一次
+//       a, b=>c //a,b 往前平移了两次
+// 0, 1, 1, 2, 3  
