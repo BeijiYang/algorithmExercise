@@ -6,12 +6,14 @@ class TreeNode {
   }
 }
 
-// here
+const getLeafsSum = (node) => ((!node.left && !node.right) ? node.value : getLeafsSum(node.left) + getLeafsSum(node.right))
+/*
+// normal code here
 const getLeafsSum = (node) => {
   if (!node.left && !node.right) return node.value
   return getLeafsSum(node.left) + getLeafsSum(node.right)
 }
-
+*/
 const node3 = new TreeNode(3)
 const node1 = new TreeNode(1)
 const node6 = new TreeNode(6)
