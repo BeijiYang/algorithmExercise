@@ -1,3 +1,4 @@
+# coding=UTF-8
 # Given a binary tree, return all root - to - leaf paths.
 # Note: A leaf is a node with no children.
 # Example:
@@ -24,19 +25,20 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[str]
         """
-        self.pathLoger(root, '')
-        return self.res
-        
-    res = []
+        res = []
+        self.pathLoger(root, '', res)
+        return res
     
-    def pathLoger(self, node, prePath):
+    def pathLoger(self, node, prePath, res):
         if node is None:
             return
         if prePath == '':
-            curPath = node.val
+            curPath = str(node.val)
         else:
             curPath = str(prePath) + '->' + str(node.val)
         if node.left is None and node.right is None:
-            self.res.append(curPath)
-        self.pathLoger(node.left, curPath)
-        self.pathLoger(node.right, curPath)
+            res.append(curPath)
+        self.pathLoger(node.left, curPath, res)
+        self.pathLoger(node.right, curPath, res)
+
+# 不能把存结果的 list res 挂在 self.res，这样作为参数传就可以。
