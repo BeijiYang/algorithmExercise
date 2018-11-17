@@ -25,11 +25,11 @@ class Solution:
                 root = root.right
                 root = self.handleLeftTree(root, stack, res)
             else:
-                if len(stack) > 0:
+                if len(stack) > 0:    # python can not pop an empty list
                     root = stack.pop(-1)
                     res.append(root.val)
                 else: 
-                    root = None
+                    root = None    # the key to escape the while loop
         return res
         
     def handleLeftTree(self, root, stack, res):
