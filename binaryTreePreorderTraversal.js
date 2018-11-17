@@ -15,6 +15,7 @@
  * @return: Preorder in ArrayList which contains node values.
  */
 
+// recursion
 const preorderTraversal = function (root) {
   // write your code here
   let res = []
@@ -25,5 +26,32 @@ const preorderTraversal = function (root) {
     logger(root.right)
   }
   logger(root)
+  return res
+}
+
+// iteration
+const handleLeft = (root, stack, res) => {
+  if (!root) return
+  res.push(root.val)
+  while (root.left) {
+    stack.push(root)
+    root = root.left
+    res.push(root.val)
+  }
+  return root
+}
+
+const preorderTraversal = (root) => {
+  let stack = []
+  let res = []
+  root = handleLeft(root, stack, res)
+  while (root) {
+    if (!root.right) {
+      root = stack.pop()
+    } else {
+      root = root.right
+      root = handleLeft(root, stack, res)
+    }
+  }
   return res
 }
