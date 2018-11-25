@@ -22,3 +22,21 @@ class Solution:
             for _ in xrange(right, len(B)):
                 C.append(B[_])
         return C
+    def merge(self, A, B):
+        # write your code here
+        C = []
+        left, right = 0, 0
+        while left < len(A) and right < len(B):
+            if A[left] < B[right]:
+                C.append(A[left])
+                left += 1
+            else:
+                C.append(B[right])
+                right += 1
+        while left < len(A):
+            C.append(A[left])
+            left += 1
+        while right < len(B):
+            C.append(B[right])
+            right += 1
+        return C      
