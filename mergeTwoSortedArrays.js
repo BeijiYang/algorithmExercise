@@ -1,7 +1,7 @@
 // Description
 // Merge two given sorted integer array A and B into a new sorted integer array.
 
-//   Example
+// Example
 // A = [1, 2, 3, 4]
 // B = [2, 4, 5, 6]
 // return [1, 2, 2, 3, 4, 4, 5, 6]
@@ -26,11 +26,11 @@ const mergeSortedArray = function (A, B) {
   }
   if (left < A.length) {
     let t = A.slice(left)
-    C.concat(t)
+    C = C.concat(t)
   }
   if (right < B.length) {
     let t = B.slice(right)
-    C.concat(t)
+    C = C.concat(t)
   }
   return C
 }
