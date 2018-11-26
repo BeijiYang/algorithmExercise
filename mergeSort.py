@@ -11,7 +11,7 @@ class Solution:
     """
     def sortIntegers2(self, A):
         # write your code here
-        # temp = []
+        # temp = [] # list out of range
         temp = [0 for _ in range(len(A))]
         self.merge_sort(0, len(A) - 1, A, temp)
 
