@@ -1,3 +1,4 @@
+# coding=UTF-8
 # Sort Integers II
 # Given an integer array, sort it in ascending order. Use quick sort, merge sort, heap sort or any O(nlogn) algorithm.
 
@@ -22,7 +23,7 @@ class Solution:
         pivot = A[left]
         
         while left <= right:
-            while left <= right and A[left] < pivot:
+            while left <= right and A[left] < pivot: # 为什么不能 = ，因为当 p 正好为最值，指针会一路运动到数组外空处
                 left += 1
                 
             while left <= right and A[right] > pivot:
@@ -38,3 +39,4 @@ class Solution:
         # quickSort
         self.quickSort(A, start, right)
         self.quickSort(A, left, end)
+        # 与 merge sort 归并排序比，由于左边的 list 已经通过 partition 确定小于右边的 list，所以不用再对两个有序数组进行排序 即归并排序里最后的 merge 操作
