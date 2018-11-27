@@ -16,7 +16,7 @@ const partitionArray = function (nums, k) {
     while (left <= right && nums[left] < k) left++
     while (left <= right && nums[right] >= k) right--
     if (left <= right) {
-      [nums[left], nums[right]] = [nums[right], nums[left]] // 解构
+      [nums[left], nums[right]] = [nums[right], nums[left]] // deconstruction
       left++
       right--
     }
