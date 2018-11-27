@@ -5,7 +5,7 @@
 // Given[3, 2, 1, 4, 5], return [1, 2, 3, 4, 5].
 
 var sortIntegers2 = function (A) {
-  if (A.length === 1) return A
+  if (A.length <= 1) return A // incase of []
   let mid = Math.floor(A.length / 2)
   let left = A.slice(0, mid)
   let right = A.slice(mid)
