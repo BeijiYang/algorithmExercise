@@ -23,11 +23,11 @@ class Solution:
         if nums is None:
             return
         self.results = []
-        self.search(nums, [], 0)
+        self.search(sorted(nums), [], 0)
         return self.results
         
     def search(self, nums, subset, startIndex):
-        self.results.append(subset)
+        self.results.append(list(subset))
         for i in xrange(startIndex, len(nums)):
             subset.append(nums[i])
             self.search(nums, subset, i+1)
