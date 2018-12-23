@@ -51,3 +51,6 @@ const searchRange = function (A, target) {
 let A = [5, 5, 5]
 let target = 5
 console.log(searchRange(A, target))
+
+// 问题拆分：其实就是找到第一个匹配位置 + 找到最后一个匹配位置。
+// 就变成了使用两次经典二分搜索
