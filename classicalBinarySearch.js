@@ -18,13 +18,13 @@ const search = function (nums, target) {
   let end = nums.length - 1
   let mid
 
-  while (start + 1 < end) {
-    let mid = start + Math.floor((end - start) / 2)
-    if (nums[mid] == target) end = mid
+  while (start + 1 < end) { // 1
+    let mid = start + Math.floor((end - start) / 2) // 2
+    if (nums[mid] == target) end = mid // 3
     if (nums[mid] < target) start = mid
     if (nums[mid] > target) end = mid
   }
-  if (nums[start] == target) return start
+  if (nums[start] == target) return start // 4
   if (nums[end] == target) return end
   return -1
 }
@@ -34,3 +34,5 @@ let target = 9
 // let nums = [-1, 0, 3, 5, 9, 12]
 // let target = 2
 console.log(search(nums, target))
+
+// 经典二分法的四个注意点Z
