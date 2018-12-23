@@ -7,3 +7,4 @@
 
 * Classical Binary Search (classicalBinarySearch.js)
 * Search for a Range (searchForARange.js)
+* Search Insert Position (searchInsertPosition.js)
