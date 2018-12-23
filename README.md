@@ -4,4 +4,5 @@
 
 ## 二分法
 
-* classicalBinarySearch
+* classical binary search (classicalBinarySearch.js)
+* Search for a Range
