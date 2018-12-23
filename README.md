@@ -2,8 +2,8 @@
 
 # 分类整理
 
-## 二分法
-**first position || last position**
+## 二分法 BinarySearch
+**key: first position || last position**
 
 * Classical Binary Search (classicalBinarySearch.js)
 * Search for a Range (searchForARange.js)
