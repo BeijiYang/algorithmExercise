@@ -30,5 +30,6 @@ const solution = isBadVersion => n => {
     }
   }
   if (isBadVersion(start)) return start
-  if (isBadVersion(end)) return end
+  // if (isBadVersion(end)) return end
+  return end // 保证有解
 }
