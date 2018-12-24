@@ -18,10 +18,8 @@
   * @return {integer} The first bad version
 */
 
-const solution = (isBadVersion) => n => {
-  let start, end, mid
-  start = 1
-  end = n
+const solution = isBadVersion => n => {
+  let start = 1, end = n, mid
 
   while (start + 1 < end) {
     mid = start + Math.floor((end - start) / 2)
