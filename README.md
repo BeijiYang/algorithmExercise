@@ -12,3 +12,4 @@
 * Search a 2D Matrix ii - Medium (searchA2DMatrixII.js)
 * First Bad Version - Medium (firstBadVersion.js)
 * Find Peak Element - Medium (findPeakElement.js)
+* Search in Rotated Sorted Array - Medium (searchInRotatedArray.js)

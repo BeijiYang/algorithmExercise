@@ -15,14 +15,15 @@ const search = function (A, target) {
   while (start + 1 < end) {
     mid = start + Math.floor((end - start) / 2)
     if (A[mid] == target) return mid
+    // 为什么要以未知断点为中心分左右段，因为两边的处理是不一样的。
     if (A[mid] > A[start]) { // 在左段
-      if (A[start] <= target && target < A[mid]) {
+      if (A[start] <= target && target < A[mid]) { // 注意边界，target 有可能正好是 start 或者 end 处的值
         end = mid
       } else {
         start = mid
       }
     } else { // 右段
-      if (A[mid] < target && target <= A[end]) {
+      if (A[mid] < target && target <= A[end]) { // 注意边界，target 有可能正好是 start 或者 end 处的值
         start = mid
       } else {
         end = mid
