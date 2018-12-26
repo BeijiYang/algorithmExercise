@@ -34,3 +34,9 @@ const search = function (A, target) {
   if (A[end] == target) return end
   return -1
 }
+
+// 本题条件是 you may assume no duplicate exists in the array
+// 当有重复的时候，最坏条件下，时间复杂度一定 O(n)
+// （假设 2 会变动）只有访问全部数据后，才知道最后一个才是 2
+// 如：1, 1, 1, 1, 1, 1, 2
+// 所以 binary search ，for loop 就好
