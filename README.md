@@ -4,6 +4,7 @@
 
 ## 二分法 BinarySearch
 **key: first position || last position**
+**O(n) => *O(logn)***
 
 * Classical Binary Search - Easy (classicalBinarySearch.js)
 * Search for a Range - Medium (searchForARange.js)
