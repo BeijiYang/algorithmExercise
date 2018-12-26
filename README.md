@@ -1,9 +1,8 @@
 **THIS IS A COLLECTION OF MY LEETCODE/LINTCODE SOLUTION**
 
-# 分类整理
-
 ## 二分法 BinarySearch
 **key: first position || last position**
+
 **O(n) => *O(logn)***
 
 * Classical Binary Search - Easy (classicalBinarySearch.js)
@@ -15,3 +14,7 @@
 * Find Peak Element - Medium (findPeakElement.js)
 * Search in Rotated Sorted Array - Medium (searchInRotatedArray.js)
 * Find Minimum in Rotated Sorted Array - Medium （findMinInRotatedSortedArray.js)
+
+
+## 待归类
+* Merge Sorted Array - Easy (mergeSortedArray.js)
