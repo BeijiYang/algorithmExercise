@@ -13,3 +13,4 @@
 * First Bad Version - Medium (firstBadVersion.js)
 * Find Peak Element - Medium (findPeakElement.js)
 * Search in Rotated Sorted Array - Medium (searchInRotatedArray.js)
+* Find Minimum in Rotated Sorted Array - Medium （findMinInRotatedSortedArray.js)
