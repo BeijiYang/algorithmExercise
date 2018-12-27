@@ -22,10 +22,18 @@ var rotateString = function (A, B) {
   return false
 };
 
+// 看到 rotate string 就想到 两倍之必能还原原数组
 var rotate = (str, offset) => {
-  let tempArr = str.split('')
-  let frontArr = tempArr.slice(0, offset).reverse()
-  let backArr = tempArr.slice(offset).reverse()
-  let resultArr = frontArr.concat(backArr).reverse()
-  return resultArr.join('')
+  if (typeof offset !== 'number' || offset < 0) throw Error('invalid offset')
+  if (offset > str.length) offset = offset % str.length
+  const headStr = str.slice(str.length - offset)
+  const rareStr = str.slice(0, str.length - offset)
+  return headStr.concat(rareStr)
 }
+// var rotate = (str, offset) => {
+//   let tempArr = str.split('')
+//   let frontArr = tempArr.slice(0, offset).reverse()
+//   let backArr = tempArr.slice(offset).reverse()
+//   let resultArr = frontArr.concat(backArr).reverse()
+//   return resultArr.join('')
+// }
