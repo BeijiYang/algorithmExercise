@@ -18,7 +18,7 @@ const findMinIndex = nums => {
   return minIndex ? minIndex : 0
 }
 Array.prototype.reverseArray = function () {
-  // const reverseArray = nums => {
+  // const reverseArray = nums => { // 注意箭头函数的 this 问题
   let nums = this
   let start = 0
   let end = nums.length - 1
