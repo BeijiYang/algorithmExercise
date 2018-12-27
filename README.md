@@ -14,6 +14,7 @@
 * Find Peak Element - Medium (findPeakElement.js)
 * Search in Rotated Sorted Array - Medium (searchInRotatedArray.js)
 * Find Minimum in Rotated Sorted Array - Medium （findMinInRotatedSortedArray.js)
+* Median of Two Sorted Arrays - Hard (medianOfTwoSortedArrays.js)
 
 ## （三步）翻转法
 * Recover Rotated Sorted Array - Easy (recoverRotatedSortedArray.js)
