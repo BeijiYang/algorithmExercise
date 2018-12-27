@@ -26,6 +26,7 @@
 
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
+* Reverse Words in a String - Medium (reverseWordsInAString.js)
 
 ## utils
 * String.prototpye.reverse (reverseString.js)
