@@ -18,5 +18,11 @@
 ## （三步）翻转法
 * Recover Rotated Sorted Array - Easy (recoverRotatedSortedArray.js)
 
+## rotate string
+**key: 两倍之必能还原初始字符串**
+
+* Rotate String - Easy (rotateString.js / rotateString.py)
+* Rotate String - Easy (rotateStrings.js)
+
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
