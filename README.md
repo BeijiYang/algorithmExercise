@@ -22,7 +22,7 @@
 **key: 两倍之必能还原初始字符串**
 
 * Rotate String - Easy (rotateString.js / rotateString.py)
-* Rotate String - Easy (rotateStrings.js)
+* Rotate String - Easy (rotateStrings.js / rotateStrings.py)
 
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
