@@ -15,6 +15,8 @@
 * Search in Rotated Sorted Array - Medium (searchInRotatedArray.js)
 * Find Minimum in Rotated Sorted Array - Medium （findMinInRotatedSortedArray.js)
 
+## （三步）翻转法
+* Recover Rotated Sorted Array - Easy (recoverRotatedSortedArray.js)
 
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
