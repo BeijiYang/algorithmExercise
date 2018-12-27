@@ -24,6 +24,7 @@
  * @param {number[]} nums2
  * @return {number}
  */
+// 思路：把问题扩展到 寻找合并后数组的第 k 个数（C[K - 1]）。再回头找中点处就好找了。
 var findMedianSortedArrays = function (nums1, nums2) {
   let len = nums1.length + nums2.length
   if (len % 2 != 0) {
