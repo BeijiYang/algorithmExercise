@@ -11,6 +11,13 @@
 // Note:
 // A and B will have length at most 100.
 
+// SMART SOLUTION
+const rotateString = (A, B) => (A.length == B.length && (A + A).indexOf(B) !== -1)
+
+
+
+
+// dummy solution
 var rotateString = function (A, B) {
   if (typeof A !== 'string' || typeof B !== 'string') return false
   if (A.length !== B.length) return false
