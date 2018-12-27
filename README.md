@@ -26,3 +26,6 @@
 
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
+
+## utils
+* String.prototpye.reverse (reverseString.js)
