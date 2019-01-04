@@ -25,6 +25,11 @@
 * Rotate String - Easy (rotateString.js / rotateString.py)
 * Rotate String - Easy (rotateStrings.js / rotateStrings.py)
 
+## 二叉树 BinarySearch
+**八成以上都能用分治法解决**
+
+* Maximum Depth of Binary Tree -Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py)
+
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
 * Reverse Words in a String - Medium (reverseWordsInAString.js)
