@@ -28,7 +28,8 @@
 ## 二叉树 BinarySearch
 **八成以上都能用分治法解决**
 
-* Maximum Depth of Binary Tree -Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py)
+* Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py)
+* Balanced Binary Tree - Easy (balancedBinaryTree.js)
 
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
