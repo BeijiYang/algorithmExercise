@@ -37,3 +37,15 @@ let getDepth = node => {
 }
 
 let isBalanced = root => (getDepth(root) != -1)
+
+/*
+balanced tree
+整棵树是不是 balanced ，取决于 左子树是不是 balanced & 右子树是不是balanced ，及其高度差
+所以定义：
+左右子树高度差小等于 1
+左子树是 balanced
+右子树是balanced
+
+另，本题技巧为
+  设定取深度函数的规则：当平衡，返回高度；当不平衡，返回 -1
+*/
