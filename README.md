@@ -30,8 +30,9 @@
 
 * ### 二叉树 Binary Search
   **八成以上都能用分治法解决**
-  * Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py)
   * Balanced Binary Tree - Easy (balancedBinaryTree.js)
+  * Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py) (root => leaf)
+  * Binary Tree Maximum Path Sum II - Easy (binaryTreeMaxPathSumII.js) (root => any)
 
 
 ## 双指针 Double Pointer
