@@ -33,6 +33,7 @@
   * Balanced Binary Tree - Easy (balancedBinaryTree.js)
   * Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py) (root => leaf)
   * Binary Tree Maximum Path Sum II - Easy (binaryTreeMaxPathSumII.js) (root => any)
+  * Binary Tree Maximum Path Sum - Hard (binaryTreeMaxPathSum.js) (any => any)
 
 
 ## 双指针 Double Pointer
