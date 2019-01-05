@@ -40,7 +40,7 @@ const getRoot2Any = node => {
 }
 
 const getAny2Any = node => {
-  if (!node) return -Infinity // 要比较，可能与负数比较
+  if (!node) return -Infinity // 要比较，可能与负数比较。如 [-3, null, null]，左右子树为空，其 sum 值与根节点比，取最大的。设为零就 bug 了。
 
   let leftAny2Any = getAny2Any(node.left)
   let rightAny2Any = getAny2Any(node.right)
@@ -55,3 +55,10 @@ const getAny2Any = node => {
 }
 
 const maxPathSum = root => getAny2Any(root)
+
+/*
+any to any 的三种可能情况：
+  完全在左子树内(left any to any )；
+  完全在右子树内(right any to any )；
+  跨过根节点，两边都有(left root to any + root + right root to any)(注意子树为负的情况)
+*/
