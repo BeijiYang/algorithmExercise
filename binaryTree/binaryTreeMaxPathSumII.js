@@ -17,6 +17,9 @@ const maxDepth = function (root) {
   return Math.max(0, Math.max(leftSubTreeDepth, rightSubTreeDepth)) + root.val
 }
 
+// one line for fun
+const maxDepth = root => (root ? Math.max(0, Math.max(maxDepth(root.left), maxDepth(root.right))) + root.val : 0)
+
 /*
 分治法
 对比 maxDepthOfBinaryTree 那道题
