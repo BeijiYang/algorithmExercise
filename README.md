@@ -1,6 +1,6 @@
 **THIS IS A COLLECTION OF MY LEETCODE/LINTCODE SOLUTION**
 
-## 二分法 BinarySearch
+## 二分法 Binary Search
 **key: first position || last position**
 
 **O(n) => *O(logn)***
@@ -19,17 +19,22 @@
 ## （三步）翻转法
 * Recover Rotated Sorted Array - Easy (recoverRotatedSortedArray.js)
 
-## rotate string
+## Rotate String
 **key: 两倍之必能还原初始字符串**
 
 * Rotate String - Easy (rotateString.js / rotateString.py)
 * Rotate String - Easy (rotateStrings.js / rotateStrings.py)
 
-## 二叉树 BinarySearch
+## 二叉树 Binary Search
 **八成以上都能用分治法解决**
 
 * Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py)
 * Balanced Binary Tree - Easy (balancedBinaryTree.js)
+
+## 分治法 Divide & Conquer
+**MergeSort / QuickSort / BinaryTree**
+
+* Partition Array - Medium (partition.js / partition.py)
 
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
