@@ -34,6 +34,9 @@
 ## 分治法 Divide & Conquer
 **MergeSort / QuickSort / BinaryTree**
 
+
+## 双指针 Double Pointer
+
 * Partition Array - Medium (partition.js / partition.py)
 
 ## 待归类
