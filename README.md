@@ -25,14 +25,13 @@
 * Rotate String - Easy (rotateString.js / rotateString.py)
 * Rotate String - Easy (rotateStrings.js / rotateStrings.py)
 
-## 二叉树 Binary Search
-**八成以上都能用分治法解决**
-
-* Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py)
-* Balanced Binary Tree - Easy (balancedBinaryTree.js)
-
 ## 分治法 Divide & Conquer
 **MergeSort / QuickSort / BinaryTree**
+
+* ### 二叉树 Binary Search
+  **八成以上都能用分治法解决**
+  * Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py)
+  * Balanced Binary Tree - Easy (balancedBinaryTree.js)
 
 
 ## 双指针 Double Pointer
