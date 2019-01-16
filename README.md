@@ -35,6 +35,7 @@
   * Binary Tree Maximum Path Sum II - Easy (binaryTreeMaxPathSumII.js) (root => any)
   * Binary Tree Maximum Path Sum - Hard (binaryTreeMaxPathSum.js) (any => any)
   * Validate Binary Search Tree - Medium (validateBinarySearchTree.js)
+  * Insert Into a Binary Search Tree - Medium (insertIntoABinarySearchTree.js)
 
 
 ## 双指针 Double Pointer
