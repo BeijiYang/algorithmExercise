@@ -43,6 +43,10 @@
  * @return {TreeNode}
  */
 var insertIntoBST = function (root, val) {
+  if (!root) {
+    root = new TreeNode(val)
+    return root
+  }
   divConquer(root, val)
   // console.log(root)
   return root
