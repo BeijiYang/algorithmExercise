@@ -36,3 +36,13 @@ var divConquer = function (node, min, max) {
   // divConquer(node.right, node.value, max)
   return divConquer(node.left, min, node.val) && divConquer(node.right, node.val, max)
 }
+
+/* 
+BST 排序二叉树
+
+左子树的节点的值 小等于 根 右子树的节点的值 都大于 根值
+或
+左子树的节点的值 都小于 根 右子树的节点的值 大等于 根值
+
+技巧：引入 最小值 最大值
+*/
