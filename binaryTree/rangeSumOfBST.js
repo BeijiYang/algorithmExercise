@@ -49,3 +49,8 @@ const rangeSumBST = function (root, L, R) {
 
   return sum
 };
+/*
+BST，分治法，两步：
+  1 判断当前值是否符合要求
+  2 判断下一步从树中怎么找 
+*/
