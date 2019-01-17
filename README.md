@@ -34,9 +34,10 @@
   * Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py) (root => leaf)
   * Binary Tree Maximum Path Sum II - Easy (binaryTreeMaxPathSumII.js) (root => any)
   * Binary Tree Maximum Path Sum - Hard (binaryTreeMaxPathSum.js) (any => any)
-  * Validate Binary Search Tree - Medium (validateBinarySearchTree.js)
-  * Insert Into a Binary Search Tree - Medium (insertIntoABinarySearchTree.js)
-  * Range Sum of BST - Medium (rangeSumOfBST.js)
+  * Validate Binary Search Tree - Medium (validateBinarySearchTree.js) (BST)
+  * Insert Into a Binary Search Tree - Medium (insertIntoABinarySearchTree.js) (BST)
+  * Range Sum of BST - Medium (rangeSumOfBST.js) (BST)
+  * Search Range in Binary Search Tree - Medium (searchRangeInBST.js) (BST)
 
 
 ## 双指针 Double Pointer
