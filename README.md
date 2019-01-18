@@ -6,6 +6,7 @@
 **O(n) => *O(logn)***
 
 * Classical Binary Search - Easy (classicalBinarySearch.js)
+* First Position of Target - Easy (firstPositionOfTarget.js)
 * Search for a Range - Medium (searchForARange.js)
 * Search Insert Position - Easy (searchInsertPosition.js)
 * Search a 2D Matrix - Easy (searchA2DMatrix.js)
