@@ -51,3 +51,22 @@ var levelOrder = function (root) {
   }
   return res
 };
+
+// BFS 骨架
+var BFS = function (root) {
+  const queue = []
+  q.push(root)
+
+  while (q.length != 0) {
+    const len = q.length
+
+    for (let i = 0; i < len; i++) {
+      const node = queue.shift()
+      if (node) {
+
+        if (node.left) queue.push(node.left)
+        if (node.right) queue.push(node.right)
+      }
+    }
+  }
+};
