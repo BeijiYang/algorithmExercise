@@ -49,3 +49,27 @@ console.log(searchInsert(A, target))
 也可以找 最后一个 小于target 的数，返回的下边需要加一
 这种思路下 要特判一下target小于所有数组里面的元素
 */
+
+// 二刷：
+var searchInsert = function (nums, target) {
+  let start = 0
+  let end = nums.length - 1
+
+  if (nums[start] > target) return 0
+  if (nums[end] < target) return end + 1
+
+  let mid
+
+  while (start + 1 < end) {
+    mid = start + Math.floor((end - start) / 2)
+
+    if (nums[mid] == target) return mid
+    if (nums[mid] > target) end = mid
+    if (nums[mid] < target) start = mid
+  }
+
+  if (nums[start] == target) return start
+  return end
+};
+
+// tip: 特情的考虑！数组两边的边界情况。

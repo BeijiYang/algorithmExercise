@@ -85,3 +85,51 @@ matrix = [[5]]
 target = 2
 
 console.log(searchMatrix(matrix, target))
+
+// 二刷
+var searchMatrix = function (matrix, target) {
+  // 特情处理
+  if (matrix.length == 0) return false
+  let firstNum = matrix[0][0]
+  let lastRow = matrix[matrix.length - 1]
+  let lastNum = lastRow[lastRow.length - 1]
+  if (firstNum > target || lastNum < target) return false
+  // 两次二分搜索
+  // 第一次 确定行数
+  let start = 0
+  let end = matrix.length - 1
+  let mid, row
+
+  while (start + 1 < end) {
+    mid = start + Math.floor((end - start) / 2)
+    if (matrix[mid][0] == target) return true
+    if (matrix[mid][0] < target) start = mid
+    if (matrix[mid][0] > target) end = mid
+  }
+  // 找出第一个比 target 小的数 错 应该是最后一个
+  if (matrix[start].length == 0) return false
+
+  if (matrix[end][0] <= target) {
+    row = end
+  } else if (matrix[start][0] <= target) {
+    row = start
+  } else {
+    return false
+  }
+  let targetRow = matrix[row]
+
+  // 第二次二分搜索，正常的数组中找值
+  start = 0
+  end = targetRow.length - 1
+
+  while (start + 1 < end) {
+    mid = start + Math.floor((end - start) / 2)
+    if (targetRow[mid] == target) return true
+    if (targetRow[mid] < target) start = mid
+    if (targetRow[mid] > target) end = mid
+  }
+  if (targetRow[start] == target) return true
+  if (targetRow[end] == target) return true
+  return false
+};
+// tip: 特情的考虑！数组两边的边界情况。空数组的情况。数组中只有一个元素的情况。
