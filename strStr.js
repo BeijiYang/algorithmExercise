@@ -14,6 +14,20 @@
 // const strStr = (haystack, needle) => (haystack.indexOf(needle))
 
 // Solution II
+// 思路 不断切相同长度的子串下来进行比较，直到主串长度不够
+const strStr = (haystack, needle) => {
+  const haystackLen = haystack.length
+  const needleLen = needle.length
+
+  for (let i = 0; i <= haystackLen - needleLen; i++) {
+    // const slicedStr = haystack.slice(i, i+needleLen)
+    const slicedStr = haystack.subStr(i, needleLen)
+    if (slicedStr == needle) return i
+  }
+  return -1
+}
+
+// Solution III
 var strStr = function (haystack, needle) {
   if (needle === '') return 0
   if (needle.length > haystack.length) return -1
