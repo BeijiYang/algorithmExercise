@@ -33,3 +33,17 @@ const solution = isBadVersion => n => {
   // if (isBadVersion(end)) return end
   return end // 保证有解
 }
+
+// 二刷
+/*
+tips:
+1 错误点：审题。是 find the fisrt TRUE. isBadVersion 返回值为true的。
+2
+const solution = isBadVersion => n => {} 相当于
+
+var solution = function(isBadVersion) {
+    return function (n) {
+
+    };
+};
+*/
