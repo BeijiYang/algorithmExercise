@@ -34,6 +34,7 @@
   **八成以上都能用分治法解决**
   * Balanced Binary Tree - Easy (balancedBinaryTree.js)
   * Maximum Depth of Binary Tree - Easy (maxDepthOfBinaryTree.js / maxDepthOfBinaryTree.py) (root => leaf)
+  * Minimum Depth of Binary Tree - Easy (minDepthOfBinaryTree.js) (root => leaf) (use MAX_VALUE)
   * Binary Tree Maximum Path Sum II - Easy (binaryTreeMaxPathSumII.js) (root => any)
   * Binary Tree Maximum Path Sum - Hard (binaryTreeMaxPathSum.js) (any => any)
   * Validate Binary Search Tree - Medium (validateBinarySearchTree.js) (BST)
