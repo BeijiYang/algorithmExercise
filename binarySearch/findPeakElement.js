@@ -40,3 +40,24 @@ const findPeakElement = function (A) {
   }
   return A[start] > A[end] ? start : end
 };
+
+// 二刷
+// tip: 确定递增还是递减 只需要两个点 不需要三个点
+const findPeakElement = A => {
+  let start = 0
+  let end = A.length - 1
+  let mid
+
+  while (start + 1 < end) {
+    mid = start + Math.floor((end - start) / 2)
+
+    if (A[mid] < A[mid + 1]) {
+      start = mid
+    } else {
+      end = mid
+    }
+
+  }
+
+  return A[start] < A[end] ? end : start
+}
