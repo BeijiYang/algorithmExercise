@@ -29,5 +29,26 @@ const findMin = function (nums) {
   return nums[start] <= nums[end] ? nums[start] : nums[end]
 }
 
+// 二刷
+const findMin = nums => {
+  let start = 0
+  let end = nums.length - 1
+
+  if (nums[end] >= nums[start]) return nums[start]
+
+  let mid
+  while (start + 1 < end) {
+    mid = start + Math.floor((end - start) / 2)
+
+    if (nums[mid] > nums[start]) { // left side
+      start = mid
+    } else { // right side
+      end = mid
+    }
+  }
+
+  return nums[start] < nums[end] ? nums[start] : nums[end]
+};
+
 
 
