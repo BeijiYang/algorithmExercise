@@ -49,3 +49,38 @@ balanced tree
 另，本题技巧为
   设定取深度函数的规则：当平衡，返回高度；当不平衡，返回 -1
 */
+
+// 二刷
+/*
+tips: 
+1 注意技巧。外面辅助值的引用。本例是 -1。求高度。高度是数字，-1 是数字。在比大小的情况下，引入最大值最小值辅助。
+
+2 当前树不平衡，或当前树的子树不平衡
+*/
+const isBalanced = node => {
+  return getDepth(node) !== -1
+}
+// const determineIsBalanced = (node, result) => {
+//     console.log(result)
+//     if (!node) return true
+//     const leftDepth = getDepth(node.left)
+//     const rightDepth = getDepth(node.right)
+
+//     if (Math.abs(leftDepth - rightDepth) > 1) {
+//         console.log('!!!!!!!!!!!!!!!!!!!!1')
+//         result = false
+//     }
+//     determineIsBalanced(node.left, result)
+//     determineIsBalanced(node.right, result)
+//     return result
+// }
+const getDepth = node => {
+  if (!node) return 0
+
+  const leftDepth = getDepth(node.left)
+  const rightDepth = getDepth(node.right)
+  // 当前树不平衡，或当前树的子树不平衡
+  if (Math.abs(leftDepth - rightDepth) > 1 || leftDepth == -1 || rightDepth == -1) return -1
+
+  return Math.max(leftDepth, rightDepth) + 1
+}
