@@ -42,6 +42,7 @@
   * Range Sum of BST - Medium (rangeSumOfBST.js) (BST)
   * Search Range in Binary Search Tree - Medium (searchRangeInBST.js) (BST)
   * Binary Tree Level Order Traversal - Medium (binaryTreeLevelOrderTraversal.js) (BFS template)
+  * Binary Tree Preorder Traversal - Medium (binaryTreePreorderTraversal.js / binaryTreePreorderTraversal.py)
 
 ## 双指针 Double Pointer
 

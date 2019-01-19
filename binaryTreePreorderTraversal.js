@@ -16,7 +16,9 @@
  */
 
 //  Non-Recursion (Recommend)
-// tip: 每次循环中，不断地把当前节点的右儿子压入栈存起来，而优先处理左儿子。先左再右。纸上画画很清晰。
+// tip: 
+// 前序遍历，根-左-右。
+// 每次循环中，不断地把当前节点的右儿子压入栈存起来，而优先处理左儿子。先左再右。纸上画画很清晰。
 const preorderTraversal = root => {
   const resList = []
   if (!root) return resList
