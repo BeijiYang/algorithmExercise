@@ -54,3 +54,39 @@ console.log(searchRange(A, target))
 
 // 问题拆分：其实就是找到第一个匹配位置 + 找到最后一个匹配位置。
 // 就变成了使用两次经典二分搜索
+
+// 二刷
+const searchRange = (A, target) => {
+  if (A.length == 0) return [-1, -1]
+  if (target > A[A.length - 1] || target < A[0]) return [-1, -1]
+  // find the first and last position
+  const firstPosition = findFirstPosition(A, target)
+  const lastPosition = findLastPosition(A, target)
+  return [firstPosition, lastPosition]
+}
+
+const findFirstPosition = (A, target) => {
+  let start = 0, end = A.length - 1, mid
+  while (start + 1 < end) {
+    mid = start + Math.floor((end - start) / 2)
+    if (A[mid] === target) end = mid
+    if (A[mid] < target) start = mid
+    if (A[mid] > target) end = mid
+  }
+  if (A[start] === target) return start
+  if (A[end] === target) return end
+  return -1
+}
+
+const findLastPosition = (A, target) => {
+  let start = 0, end = A.length - 1, mid
+  while (start + 1 < end) {
+    mid = start + Math.floor((end - start) / 2)
+    if (A[mid] === target) start = mid
+    if (A[mid] < target) start = mid
+    if (A[mid] > target) end = mid
+  }
+  if (A[end] === target) return end
+  if (A[start] === target) return start
+  return -1
+}
