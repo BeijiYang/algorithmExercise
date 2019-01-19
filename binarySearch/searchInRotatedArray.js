@@ -40,3 +40,45 @@ const search = function (A, target) {
 // （假设 2 会变动）只有访问全部数据后，才知道最后一个才是 2
 // 如：1, 1, 1, 1, 1, 1, 2
 // 所以 binary search ，for loop 就好
+
+
+/*
+二刷：
+tips: 
+1 分段后的处理不够精炼。其实就是，左段时，只有 （nums[start] <= target < nums[mid]）才能夹住，此时 end 左移到 mid，否则，由于切口不确定，而 target 肯定不在 mid 左侧，可以放心的让 start 右移，丢掉左边的数。
+2 二刷做题的出错点：nums[start] <= target 丢了等号。注意移动 start end 指针时丢掉解。
+*/
+var search = function (nums, target) {
+  let start = 0
+  let end = nums.length - 1
+  let mid
+
+  while (start + 1 < end) {
+    mid = start + Math.floor((end - start) / 2)
+    if (nums[mid] == target) return mid
+
+    if (nums[mid] > nums[start]) {// 左段
+      if (nums[mid] < target) start = mid
+      if (nums[mid] > target) {
+        if (target >= nums[start]) {
+          end = mid
+        } else {
+          start = mid
+        }
+      }
+    } else { // 右段
+      if (nums[mid] > target) {
+        end = mid
+      } else {
+        if (target <= nums[end]) {
+          start = mid
+        } else {
+          end = mid
+        }
+      }
+    }
+  }
+  if (nums[start] == target) return start
+  if (nums[end] == target) return end
+  return -1
+};
