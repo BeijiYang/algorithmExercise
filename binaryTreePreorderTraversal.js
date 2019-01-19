@@ -15,6 +15,23 @@
  * @return: Preorder in ArrayList which contains node values.
  */
 
+//  Non-Recursion (Recommend)
+// tip: 每次循环中，不断地把当前节点的右儿子压入栈存起来，而优先处理左儿子。先左再右。纸上画画很清晰。
+const preorderTraversal = root => {
+  const resList = []
+  if (!root) return resList
+  const stack = []
+  let node = root
+
+  while (node) {
+    resList.push(node.val)
+    if (node.right) stack.push(node.right)
+    node = node.left || stack.pop()
+  }
+  return resList
+}
+
+
 // recursion
 const preorderTraversal = function (root) {
   // write your code here
@@ -30,17 +47,6 @@ const preorderTraversal = function (root) {
 }
 
 // iteration
-const handleLeft = (root, stack, res) => {
-  if (!root) return
-  res.push(root.val)
-  while (root.left) {
-    stack.push(root)
-    root = root.left
-    res.push(root.val)
-  }
-  return root
-}
-
 const preorderTraversal = (root) => {
   let stack = []
   let res = []
@@ -55,3 +61,15 @@ const preorderTraversal = (root) => {
   }
   return res
 }
+const handleLeft = (root, stack, res) => {
+  if (!root) return
+  res.push(root.val)
+  while (root.left) {
+    stack.push(root)
+    root = root.left
+    res.push(root.val)
+  }
+  return root
+}
+
+// 
