@@ -17,3 +17,14 @@ const maxDepth = function (root) {
 分为 左子树的高度 与 右子树的高度
 细分到当一颗树根节点为空时，高度为零
 */
+
+// 二刷
+// tip: 二叉树的分治法，跳出递归的条件处，return 的东西要注意。这里求 depth ，一个数字，返回 0 。
+const maxDepth = root => {
+  if (!root) return 0
+
+  let leftDepth = maxDepth(root.left)
+  let rightDepth = maxDepth(root.right)
+
+  return leftDepth > rightDepth ? leftDepth + 1 : rightDepth + 1
+}
