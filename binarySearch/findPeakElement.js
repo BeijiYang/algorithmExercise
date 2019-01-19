@@ -61,3 +61,11 @@ const findPeakElement = A => {
 
   return A[start] < A[end] ? end : start
 }
+
+//  Linear Scan Solution
+const findPeakElement = A => {
+  for (let i = 0; i < A.length; i++) {
+    if (A[i] > A[i + 1]) return i
+  }
+  return A.length - 1
+}
