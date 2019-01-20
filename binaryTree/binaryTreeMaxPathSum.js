@@ -64,11 +64,21 @@ any to any 的三种可能情况：
 */
 // 二刷
 // 注意三种可能
+/*
+tip:
+此处设置当节点为空时的返回值。
+需注意
+1 不是取深度，而是取 node.val，有可能是负数。
+2 当前规则是 左子树内部 右子树内部 通过根节点三种情况的累加值 比较，选大的。
+    如 [-3, null, null] ，设为零的话，就是 Math.max(-3, 0 ,0)。结果成 0 了。
+    其实，只有根节点的情况，当然是 node.val 即 -3。
+    所以设置为空时为负无穷，比负数都小。
+*/
 const maxPathSum = root => (anyToAny(root))
 
 
 const anyToAny = node => {
-  if (!node) return -Infinity
+  if (!node) return -Infinity // tip
   // if (!node.left && !node.right) return node.val
 
   const leftAnyToAny = anyToAny(node.left)
