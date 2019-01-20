@@ -58,7 +58,30 @@ const maxPathSum = root => getAny2Any(root)
 
 /*
 any to any 的三种可能情况：
-  完全在左子树内(left any to any )；
-  完全在右子树内(right any to any )；
-  跨过根节点，两边都有(left root to any + root + right root to any)(注意子树为负的情况)
+  完全在左子树内(left any2any )；
+  完全在右子树内(right any2any )；
+  跨过根节点，两边都有(left root2any + root + right root2any)(注意子树为负的情况)
 */
+// 二刷
+// 注意三种可能
+const maxPathSum = root => (anyToAny(root))
+
+
+const anyToAny = node => {
+  if (!node) return -Infinity
+  // if (!node.left && !node.right) return node.val
+
+  const leftAnyToAny = anyToAny(node.left)
+  const rightAnyToAny = anyToAny(node.right)
+  const crossRoot = Math.max(0, rootToAny(node.left)) + Math.max(0, rootToAny(node.right)) + node.val
+  return Math.max(leftAnyToAny, rightAnyToAny, crossRoot)
+}
+
+const rootToAny = node => {
+  if (!node) return 0
+  // if (!node.left && !node.right) return node.val
+  const leftRootToAny = rootToAny(node.left)
+  const rightRootToAny = rootToAny(node.right)
+
+  return Math.max(0, Math.max(leftRootToAny, rightRootToAny)) + node.val
+}
