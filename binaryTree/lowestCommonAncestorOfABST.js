@@ -34,3 +34,34 @@ var lowestCommonAncestor = function (root, p, q) {
   }
   return root;
 };
+// 分治法
+const lowestCommonAncestor = (root, p, q) => {// 保证 p < q?
+  if (!root) return
+  if (p.val > q.val)[q, p] = [p, q]
+
+  if (p.val <= root.val && root.val <= q.val) return root
+
+  if (p.val < root.val && q.val < root.val) return lowestCommonAncestor(root.left, p, q)
+  if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(root.right, p, q)
+
+}
+
+// 二叉树通用方法 binary tree common solution
+const lowestCommonAncestor = (root, p, q) => {
+  if (!root) return
+
+  if (root.val == p.val || root.val == q.val) return root
+
+  const left = lowestCommonAncestor(root.left, p, q)
+  const right = lowestCommonAncestor(root.right, p, q)
+
+  if (left && right) {
+    return root
+  } else if (left) {
+    return left
+  } else if (right) {
+    return right
+  } else {
+    return null
+  }
+};
