@@ -46,6 +46,7 @@
   * Binary Tree Inorder Traversal - Medium (binaryTreeInorderTraversal.js) (R)
   * Inorder Successor in BST - Medium (inorderSuccessorInBST.js / inorderSuccessorInBST.py) (BST)
   * Path Sum - Easy (pathSum.js)
+  * Lowest Common Ancestor of a Binary Tree - Medium (lowestCommonAncestorOfABinaryTree.js)
 
 ## 双指针 Double Pointer
 
