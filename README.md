@@ -43,7 +43,7 @@
   * Search Range in Binary Search Tree - Medium (searchRangeInBST.js) (BST)
   * Binary Tree Level Order Traversal - Medium (binaryTreeLevelOrderTraversal.js) (BFS template) (R)
   * Binary Tree Preorder Traversal - Medium (binaryTreePreorderTraversal.js / binaryTreePreorderTraversal.py) (R)
-  * Binary Tree Inorder Traversal - Medium (binaryTreeInorderTraversal.js) (R)
+  * Binary Tree Inorder Traversal - Medium (binaryTreeInorderTraversal.js) (BFS 宽度优先搜索) (R)
   * Inorder Successor in BST - Medium (inorderSuccessorInBST.js / inorderSuccessorInBST.py) (BST)
   * Path Sum - Easy (pathSum.js)
   * Lowest Common Ancestor of a Binary Tree - Medium (lowestCommonAncestorOfABinaryTree.js)
