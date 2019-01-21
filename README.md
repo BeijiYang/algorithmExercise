@@ -5,7 +5,7 @@
 
 **O(n) => *O(logn)***
 
-* Classical Binary Search - Easy (classicalBinarySearch.js)
+* Classical Binary Search - Easy (classicalBinarySearch.js)  (R)
 * First Position of Target - Easy (firstPositionOfTarget.js)
 * Search for a Range - Medium (searchForARange.js)
 * Search Insert Position - Easy (searchInsertPosition.js)
@@ -41,8 +41,10 @@
   * Insert Into a Binary Search Tree - Medium (insertIntoABinarySearchTree.js) (BST)
   * Range Sum of BST - Medium (rangeSumOfBST.js) (BST)
   * Search Range in Binary Search Tree - Medium (searchRangeInBST.js) (BST)
-  * Binary Tree Level Order Traversal - Medium (binaryTreeLevelOrderTraversal.js) (BFS template)
-  * Binary Tree Preorder Traversal - Medium (binaryTreePreorderTraversal.js / binaryTreePreorderTraversal.py)
+  * Binary Tree Level Order Traversal - Medium (binaryTreeLevelOrderTraversal.js) (BFS template) (R)
+  * Binary Tree Preorder Traversal - Medium (binaryTreePreorderTraversal.js / binaryTreePreorderTraversal.py) (R)
+  * Binary Tree Inorder Traversal - Medium (binaryTreeInorderTraversal.js) (R)
+  * Inorder Successor in BST - Medium (inorderSuccessorInBST.js / inorderSuccessorInBST.py) (BST)
   * Path Sum - Easy (pathSum.js)
 
 ## 双指针 Double Pointer
