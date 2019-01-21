@@ -46,3 +46,25 @@ BST 排序二叉树
 
 技巧：引入 最小值 最大值
 */
+
+// 二刷
+/*
+  二叉树的问题，多是分治法。把问题分解到一个小树乃至一个节点。
+
+  分： 从定义出发，这个小的三个点的BST，其左儿子一定比根小，另一边一定更大。有比较大小，可以考虑引入最大最小值d的思路。在这颗小BST树里，最小值就是左儿子，最大值就是右儿子。如果没有左右叶子节点怎么处理，跳过。
+      比较大小的情况下，对于不确定的值，用语言的最大最小值保证 min max 的含义。
+
+  治： 对于分出来的小树的处理就简单了，违反定义（如比应该的最大值还大）就 false
+*/
+const isValidBST = root => (divConquer(root))
+
+const divConquer = (node, min, max) => {
+  if (!node) return true
+
+  // if (node.val > max || node.val < min) return false
+  if ((node.val >= max || node.val < min) || (node.val > max || node.val <= min)) return false // BST 子树，等号在左边或者在右边
+
+  // if (node.left) divConquer(node.left, -Infinity, node.val) // 此处不用 if ，函数第一行已经考虑了这种情况
+  // if (node.right) divConquer(node.right, node.val, Infinity)
+  return divConquer(node.left, -Infinity, node.val) && divConquer(node.right, node.val, Infinity)
+}
