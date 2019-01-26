@@ -58,6 +58,7 @@
 * Unique Paths II - Medium (uniquePathsII.js)
 * Climbing Stairs - Easy (climbingStairs.js)
 * Jump Game - Medium (jumpGame.js)
+* Jump Game II - Hard (jumpGameII.js)
 
 ## 双指针 Double Pointer
 
