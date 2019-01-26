@@ -49,3 +49,9 @@ const uniquePaths = (m, n) => {
   // console.log(dpArr)
   return dpArr[n - 1][m - 1]
 }
+
+/**
+ * tips:
+ * 1. m * n 的矩阵，m 是列，n 是行。画出来，m 是横，n 是竖；
+ * 2. 双循环计算内部点的时候，先 n 后 m 
+ */
