@@ -38,3 +38,23 @@ const jump = A => {
   }
   return dpArr[A.length - 1]
 }
+
+// SOLUTION TWO
+// 前者数据量大时超时，用一点贪心的思路改进
+const jump = A => {
+  if (!A.length) return 0
+  // state: F[I] 表示跳到第 i 个位置最少需要几步
+  const dpArr = []
+  // initialize 初始化
+  dpArr[0] = 0
+  // 对于每一个点，要求跳到它需要的最少步数，可以通过 j 点求，后者满足：在 i 前；本身可跳到；能从 j 跳到 i; 求法为 F[I] = MIN(F[J]) + 1
+  for (let i = 1; i < A.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (dpArr[j] != Infinity && j + A[j] >= i) {
+        dpArr[i] = dpArr[j] + 1 // F[I] = MIN(F[J]) + 1
+        break // 假设前面获得的值比后面获得的值要小。（true，但不好证明）
+      }
+    }
+  }
+  return dpArr[A.length - 1]
+}
