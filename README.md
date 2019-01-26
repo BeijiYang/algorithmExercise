@@ -50,7 +50,7 @@
   * Lowest Common Ancestor of a Binary Search Tree - Easy (lowestCommonAncestorOfABST.js)
 
 
-## 动态规划
+## 动态规划 Dynamic Programming
 
 * Triangle - Medium (triangle.js)
 
