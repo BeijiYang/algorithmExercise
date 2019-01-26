@@ -56,7 +56,7 @@ const minimumTotal = triangle => {
   let minTotal = Infinity
   // 初始化起点
   tempArr[0][0] = triangle[0][0]
-  // 初始化路径可能性唯一的两边
+  // 初始化路径可能性唯一的两边；而且这些点的坐标代入计算会越界，而且能直接算出来(只有一条路)。
   for (i = 1; i < len; i++) {
     tempArr[i][0] = tempArr[i - 1][0] + triangle[i][0]
     // tempArr[i][i] = tempArr[i-1][j-1] + triangle[i-1][j-1]
@@ -75,4 +75,9 @@ const minimumTotal = triangle => {
   }
   return minTotal
 }
-
+/**
+ * 方案类统计的动态规划
+ * 初始化的思路：
+ * 一开始能把哪些东西变成 1，即哪些东西有且只有一个方案。
+ * 有两个方案的，多半可以用公式套出来。
+ */
