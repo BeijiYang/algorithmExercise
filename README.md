@@ -54,7 +54,8 @@
 
 * Triangle - Medium (triangle.js)
 * Minimum Path Sum - Medium (minPathSum.js)
-* Unique Paths- Medium (uniquePaths.js)
+* Unique Paths - Medium (uniquePaths.js)
+* Unique Paths II - Medium (uniquePathsII.js)
 
 ## 双指针 Double Pointer
 
