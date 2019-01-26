@@ -56,6 +56,7 @@
 * Minimum Path Sum - Medium (minPathSum.js)
 * Unique Paths - Medium (uniquePaths.js)
 * Unique Paths II - Medium (uniquePathsII.js)
+* Climbing Stairs - Easy (climbingStairs.js)
 
 ## 双指针 Double Pointer
 
