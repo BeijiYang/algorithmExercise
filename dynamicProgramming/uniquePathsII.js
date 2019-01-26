@@ -33,7 +33,7 @@ const uniquePathsWithObstacles = obstacleGrid => {
   const m = obstacleGrid[0].length
   if (!m) return 0
 
-  // 创建辅助二维数组
+  // 创建初始元素都为 0 的 m * n 的辅助二维数组
   const dpArr = [], insideArr = []
   for (let i = 0; i < m; i++) {
     insideArr[i] = 0
@@ -71,4 +71,11 @@ const uniquePathsWithObstacles = obstacleGrid => {
   }
 
   return dpArr[n - 1][m - 1]
-} 
+}
+
+/**
+ * tip:
+ * 创建初始元素都为 0 的 m * n 的辅助二维数组时，一定注意，内层数组每次都要用新的副本！
+ * 否则，都成了一个相同的引用。外层数组里小数组（指针存储的地址都指向）为同一个实际数组对象。
+ * 带来的问题是，改其中一个小数组，其他小数组也都跟着改了。
+ */
