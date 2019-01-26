@@ -53,6 +53,7 @@
 ## 动态规划 Dynamic Programming
 
 * Triangle - Medium (triangle.js)
+* Minimum Path Sum - Medium (minPathSum.js)
 
 ## 双指针 Double Pointer
 
