@@ -37,3 +37,42 @@ const minimumTotal = function (triangle) {
   }
   return divConquer(0, 0)
 }
+
+// solution 2
+// 动态规划，自顶向下 top down
+// 画个小三角会清楚很多
+const minimumTotal = triangle => {
+  if (!triangle) return null
+
+  let i, j
+  const len = triangle.length
+  // let arr = []
+  // let tempArr = initialize2DArray(len,len,)
+  let tempArr = []
+  for (i = 0; i < len; i++) {
+    tempArr[i] = []
+
+  }
+  let minTotal = Infinity
+  // 初始化起点
+  tempArr[0][0] = triangle[0][0]
+  // 初始化路径可能性唯一的两边
+  for (i = 1; i < len; i++) {
+    tempArr[i][0] = tempArr[i - 1][0] + triangle[i][0]
+    // tempArr[i][i] = tempArr[i-1][j-1] + triangle[i-1][j-1]
+    tempArr[i][i] = tempArr[i - 1][i - 1] + triangle[i][i] // 坐标下标的想不清的，举个例子就明白了
+  }
+  // 中间的多种可能的点，二维数组，双重循环
+  for (i = 2; i < len; i++) {
+    for (j = 1; j < i; j++) {
+      tempArr[i][j] = Math.min(tempArr[i - 1][j - 1], tempArr[i - 1][j]) + triangle[i][j]
+    }
+  }
+
+  // console.log(tempArr)
+  for (i = 0; i < len; i++) {
+    minTotal = tempArr[len - 1][i] < minTotal ? tempArr[len - 1][i] : minTotal
+  }
+  return minTotal
+}
+
