@@ -63,6 +63,7 @@
 ## 链表 Linked List
 
 * Remove Duplicates from Sorted List II - Medium (removeDuplicatesFromSortedListII.js)
+* Remove Duplicates from Sorted List - Easy (removeDuplicatesFromSortedList.js)
 
 ## 双指针 Double Pointer
 
