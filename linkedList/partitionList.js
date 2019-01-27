@@ -13,6 +13,11 @@
  * @param x: An integer
  * @return: A ListNode
  */
+/**
+ * tip:
+ *  构建两条链表，一条链比 x 小的；一条链大的
+ *  最后连起两条链表，注意头尾值，尤其尾部的 null。
+ */
 const partition = (head, x) => {
   const lowerDummy = new ListNode(0)
   const higherDummy = new ListNode(0)
