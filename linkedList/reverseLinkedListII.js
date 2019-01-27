@@ -13,7 +13,9 @@
  * @param n: An integer
  * @return: The head of the reversed ListNode
  */
-
+// tip: 按顺序做舒服些，先找到两个点 prem m 
+//      之后就是 反转m-n，同时也找到n postn点
+//      再连接两头
 const reverseBetween = (head, m, n) => {
   if (!head) return null
 
