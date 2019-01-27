@@ -66,6 +66,7 @@
 * Remove Duplicates from Sorted List - Easy (removeDuplicatesFromSortedList.js)
 * Reverse Linked List - Easy (reverseLinkedList.js)
 * Reverse Linked List II - Medium (reverseLinkedListII.js)
+* Partition List - Medium (partitionList.js)
 
 ## 双指针 Double Pointer
 
