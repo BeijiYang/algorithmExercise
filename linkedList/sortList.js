@@ -23,6 +23,12 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+/**
+ * tips:
+ *    时间 O(n log n) 的常见 sort 算法，快排、归并。
+ *    空间 O(1) constant space 的，对于数组，只有快排，归并 O(n)；对于链表，归并也可以 O(1)。
+ *    对于链表的归并排序如下，一个递归的主函数，一个归并排序方法，一个链表找中点的方法。
+ */
 // merge sort
 // 一分为二，左边递归排序，右边递归排序，整体归并，先菊后整。
 const sortList = head => {
