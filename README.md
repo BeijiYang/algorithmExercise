@@ -68,6 +68,7 @@
 * Reverse Linked List II - Medium (reverseLinkedListII.js)
 * Partition List - Medium (partitionList.js)
 * Sort List - Medium (sortList.js)
+* Reorder List - Medium (reorderList.js)
 
 ## 双指针 Double Pointer
 
