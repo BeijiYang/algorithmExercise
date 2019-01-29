@@ -16,8 +16,6 @@
  *  3 两条链表，按某种条件，组合成一个大的，想到归并排序算法（最关键）
  * 
  *  4 本题由若干常用操作组成
- *  
- * 
  */
 const reorderList = head => {
   if (head == null || head.next == null) return head
