@@ -9,6 +9,16 @@
 // Given 1 -> 2 -> 3 -> 4, reorder it to 1 -> 4 -> 2 -> 3.
 // Example 2:
 // Given 1 -> 2 -> 3 -> 4 -> 5, reorder it to 1 -> 5 -> 2 -> 4 -> 3.
+/**
+ * tips:
+ *  1 看题意：奇数位：0,1,2,3... 偶数位：n, n-1, n-2...
+ *  2 链表单向，想要回溯，只能反转之
+ *  3 两条链表，按某种条件，组合成一个大的，想到归并排序算法（最关键）
+ * 
+ *  4 本题由若干常用操作组成
+ *  
+ * 
+ */
 const reorderList = head => {
   if (head == null || head.next == null) return head
 
