@@ -64,7 +64,7 @@
 
 * Remove Duplicates from Sorted List II - Medium (removeDuplicatesFromSortedListII.js)
 * Remove Duplicates from Sorted List - Easy (removeDuplicatesFromSortedList.js)
-* Reverse Linked List - Easy (reverseLinkedList.js)
+* Reverse Linked List - Easy (reverseLinkedList.js) (TODO: 递归解)
 * Reverse Linked List II - Medium (reverseLinkedListII.js)
 * Partition List - Medium (partitionList.js)
 * Sort List - Medium (sortList.js)
