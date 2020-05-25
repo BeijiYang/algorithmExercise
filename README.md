@@ -69,6 +69,9 @@
 * Partition List - Medium (partitionList.js)
 * Sort List - Medium (sortList.js)
 * Reorder List - Medium (reorderList.js)
+* Convert binary number in a linked list to integer - Easy (convertBinaryNumberInALinkedListToInteger.js)
+* Delete node in a linked list - Easy (deleteNodeInALinkedList.js)
+* Middle of the linked list - (Easy) (middleOfTheLinkedList.js)
 
 ## 双指针 Double Pointer
 
