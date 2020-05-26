@@ -11,6 +11,7 @@
 // Input: 1 -> 1 -> 2 -> 3 -> 3
 // Output: 1 -> 2 -> 3
 
+// 循环
 const deleteDuplicates = head => {
   if (!head) return null
 
@@ -36,3 +37,23 @@ const deleteDuplicates = head => {
 
   return dummy.next
 }
+
+// 递归
+const deleteDuplicates = head => {
+  if (!head || !head.next) return head;
+  head.next = deleteDuplicates(head.next); // 链表递归常用思路：当前节点的 next 是其余所有节点的 xx 操作的结果。
+  return head.val === head.next.val
+    ? head.next
+    : head;
+}
+
+  // while(head) {     // 先抽象递归三要素列出来，不要受循环思路影响先上 while
+  //   if (head.val === head.next.val) {
+  //     head.next = deleteDuplicates(head.next.next);
+  //     return head
+  //   } else {
+  //     return head.next
+  //   }
+  // }
+// }
+

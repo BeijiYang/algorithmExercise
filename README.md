@@ -72,10 +72,13 @@
 * Convert binary number in a linked list to integer - Easy (convertBinaryNumberInALinkedListToInteger.js)
 * Delete node in a linked list - Easy (deleteNodeInALinkedList.js)
 * Middle of the linked list - (Easy) (middleOfTheLinkedList.js)
+* Merge two sorted lists - (Easy) (margeTwoSortedLists.js)
+* Intersection of two linked lists - Easy (intersectionOfTwoLinkedLists.js)
 
 ## 双指针 Double Pointer
 
 * Partition Array - Medium (partition.js / partition.py)
+* Intersection of two linked lists - Easy (intersectionOfTwoLinkedLists.js)
 
 ## 待归类
 * Merge Sorted Array - Easy (mergeSortedArray.js)
