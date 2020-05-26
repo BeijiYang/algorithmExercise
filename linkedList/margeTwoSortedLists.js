@@ -8,8 +8,8 @@ const mergeTwoLists = (h1, h2) => {
   if (!h1 || !h2) return h1 || h2;
   while (h1 && h2) {
     if (h1.val < h2.val) {
-      h1.next = mergeTwoLists(h1.next, h2);
-      return h1;
+      h1.next = mergeTwoLists(h1.next, h2); // 链表递归常用思路，该节点的 next 是其余所有节点 xx 操作后的结果链表
+      return h1; // 返回这一步的操作结果，所有节点 XX 操作后的完整链表
     } else {
       h2.next = mergeTwoLists(h1, h2.next);
       return h2;
