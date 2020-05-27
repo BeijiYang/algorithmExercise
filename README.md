@@ -74,6 +74,7 @@
 * Middle of the linked list - (Easy) (middleOfTheLinkedList.js)
 * Merge two sorted lists - (Easy) (margeTwoSortedLists.js)
 * Intersection of two linked lists - Easy (intersectionOfTwoLinkedLists.js)
+* Next Greater Node In Linked List - Medium (nextGreaterNodeInLinkedList.js)
 
 ## 双指针 Double Pointer
 
