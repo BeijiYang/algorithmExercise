@@ -75,6 +75,7 @@
 * Merge two sorted lists - (Easy) (margeTwoSortedLists.js)
 * Intersection of two linked lists - Easy (intersectionOfTwoLinkedLists.js)
 * Next Greater Node In Linked List - Medium (nextGreaterNodeInLinkedList.js)
+*  Remove Linked List Elements - Easy (removeLinkedListElements.js)
 
 ## 双指针 Double Pointer
 
