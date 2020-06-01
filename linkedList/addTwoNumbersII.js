@@ -64,3 +64,51 @@ const addTwoNumbers = (l1, l2) => {
 };
 
 
+// 不翻转链表，利用数组存值
+// 代码封装性更好
+const addTwoNumbers = (l1, l2) => {
+  const getValuesOfLinkedList = head => {
+    const values = [];
+    let cur = head;
+    while (cur) {
+      values.push(cur.val);
+      cur = cur.next;
+    }
+    return values;
+  }
+
+  const getReslutValues = (arr1, arr2) => {
+    if (!arr1.length || !arr2.length) return arr1 || arr2;
+    const result = [];
+    let add = 0;
+
+    for (let i = 0; i < arr1.length || arr2.length; i++) {
+      const cur1 = arr1[i] || 0;
+      const cur2 = arr2[i] || 0;
+      const sum = cur1 + cur2 + add;
+      add = (sum > 9) ? 1 : 0; // 进位是加上一步的 add，故先求 sum 再更新 add
+      const val = add ? (sum - 10) : sum
+      result.push(val);
+    }
+    if (add) result.push(add);
+    return result;
+  }
+
+  const generateLinkedListFromArr = (arr = []) => {
+    if (!arr.length) return null;
+    const dummy = new ListNode(null);
+    let prevNode = dummy;
+    arr.forEach(val => {
+      const curNode = new ListNode(val);
+      prevNode.next = curNode;
+      prevNode = prevNode.next;
+    })
+    prevNode.next = null;
+    return dummy.next;
+  }
+
+  const reversedValues1 = getValuesOfLinkedList(l1).reverse();
+  const reversedValues2 = getValuesOfLinkedList(l2).reverse();
+  const resultArr = getReslutValues(reversedValues1, reversedValues2).reverse();
+  return generateLinkedListFromArr(resultArr);
+};
