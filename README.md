@@ -78,6 +78,7 @@
 * Remove Linked List Elements - Easy (removeLinkedListElements.js)
 * Palindrome Linked List - Easy (palindromeLinkedList.js)
 * Linked List Cycle - Easy (linkedListCycle.js)
+* Linked List Components - Medium (linkedListComponents.js)
 
 ## 双指针 Double Pointer
 
