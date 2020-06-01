@@ -79,6 +79,7 @@
 * Palindrome Linked List - Easy (palindromeLinkedList.js)
 * Linked List Cycle - Easy (linkedListCycle.js)
 * Linked List Components - Medium (linkedListComponents.js)
+* Odd Even Linked List - Medium (oddEvenLinkedList.js)
 
 ## 双指针 Double Pointer
 
