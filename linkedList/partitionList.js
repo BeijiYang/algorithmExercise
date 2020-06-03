@@ -37,7 +37,7 @@ const partition = (head, x) => {
   }
 
   lower.next = higherDummy.next
-  higer.next = null // 勿漏掉头尾！
+  higer.next = null // 勿漏掉头尾！2020.6.重写，也丢了尾部的 null。造成了返回的链表有环，内存堆溢出。注意哦。
 
   return lowerDummy.next
 }
