@@ -8,6 +8,13 @@
 // Input: head = 1 -> 4 -> 3 -> 2 -> 5 -> 2, x = 3
 // Output: 1 -> 2 -> 2 -> 4 -> 3 -> 5
 
+// 本题其实就是快排的一个重要步骤。 
+// 先整体有序，再局部有序。即先整个一分为二，使得左边小右边大。（接着两边再递归进行）
+
+// 快排不稳定
+
+// time 平均 nlogn （最坏 n2 平方）
+// space O(1) 在数组上
 /**
  * @param head: The first node of linked list
  * @param x: An integer
