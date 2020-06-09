@@ -40,12 +40,12 @@ const sortList = head => {
   mid.next = null
   let left = sortList(head)
 
-  return mergeSort(left, right)
+  return mergeLists(left, right)
 };
 
 // get the middle of the linked list
 const getMiddle = head => {
-  let slow = head, fast = head.next
+  let slow = head, fast = head.next // 相比同起点时，偶数时中点位置偏左。如此，可以在利用 mid 与 mid.next，而不用去前继节点（m-1 与 m）。
 
   while (fast && fast.next) {
     slow = slow.next
@@ -56,7 +56,7 @@ const getMiddle = head => {
 }
 
 // 两边一个一个取，比大小
-const mergeSort = (firstHead, secondHead) => {
+const mergeLists = (firstHead, secondHead) => {
   const dummy = new ListNode()
   let tail = dummy
 
