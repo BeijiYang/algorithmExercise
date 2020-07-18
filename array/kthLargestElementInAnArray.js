@@ -46,3 +46,30 @@ const quickSort = (arr, low, high, k) => {
   }
   return arr[j + 1]; // 快排的结果，双指针有可能错开一位。j,j+1,i
 }
+
+// 更快的版本
+const quickSelect = (arr, low, high, k) => {
+  if (low === high) return arr[low];
+
+  let mid = low + Math.floor((high - low) / 2);  // 更快的原因，记住 Math.floor()
+  let i = low, j = high, t = arr[mid];
+
+  while (i <= j) {
+    while (i <= j && arr[j] > t) j--;
+    while (i <= j && arr[i] < t) i++;
+    if (i <= j) {
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+      j--;
+      i++;
+    }
+  }
+
+  // low j   i high   where is the kth position?
+  if (low + k - 1 <= j) { // 这里需要每次的首位 low 或 start 参与计算新的 k 的位置。不行就记住。
+    return quickSelect(arr, low, j, k);
+  }
+  if (low + k - 1 >= i) {
+    return quickSelect(arr, i, high, k - (i - low));
+  }
+  return arr[j + 1];
+}
