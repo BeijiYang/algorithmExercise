@@ -85,6 +85,7 @@
 ## 数组 Array
 ### Sorted Array
 * Kth Largest Element in an Array - Medium (kthLargestElementInAnArray.js)
+* Median of Two Sorted Arrays - Hard (medianOfTwoSortedArrays.js)
 
 ## 双指针 Double Pointer
 

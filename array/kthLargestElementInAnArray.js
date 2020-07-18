@@ -13,6 +13,7 @@
 // Output: 4
 // Note:
 // You may assume k is always valid, 1 ≤ k ≤ array's length.
+// 所以注意，这个算法里有个别扭的地方，k 是从 1 开始的。0是第一个数。
 
 /**
  * @param {number[]} arr
